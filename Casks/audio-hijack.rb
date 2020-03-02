@@ -1,13 +1,13 @@
 cask 'audio-hijack' do
-  version '3.5.5'
-  sha256 'b3dfe166e0eb25cd57d06911340d0184ee2d36426067074830254f2d944bb540'
+  version '3.6.4'
+  sha256 'd02ce6e19fc5bd032048676c9021ad681a916d56cf0c5a64564ab2f724751d13'
 
   url 'https://rogueamoeba.com/audiohijack/download/AudioHijack.zip'
   appcast 'https://www.rogueamoeba.com/audiohijack/releasenotes.php'
   name 'Audio Hijack'
   homepage 'https://www.rogueamoeba.com/audiohijack/'
 
-  depends_on macos: '>= :mavericks'
+  depends_on macos: '>= :sierra'
 
   app 'Audio Hijack.app'
 

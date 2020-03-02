@@ -1,10 +1,10 @@
 cask 'thonny' do
-  version '3.0.5'
-  sha256 '5f1eb4c100b8088a2afdf2aef2342235479f38c175dc4d9952e9bd7d8dd12816'
+  version '3.2.6'
+  sha256 'bf2666d4877129fc507127be162d4864eb080a005d0484ae6bf20647034b9226'
 
-  # bitbucket.org/plas/thonny/downloads was verified as official when first introduced to the cask
-  url "https://bitbucket.org/plas/thonny/downloads/thonny-#{version}.dmg"
-  appcast 'https://thonny.org/blog/categories/releases.html'
+  # github.com/thonny/thonny/releases/download was verified as official when first introduced to the cask
+  url "https://github.com/thonny/thonny/releases/download/v#{version}/thonny-#{version}.dmg"
+  appcast 'https://github.com/thonny/thonny/releases.atom'
   name 'Thonny'
   homepage 'https://thonny.org/'
 

@@ -1,6 +1,6 @@
 cask 'jetbrains-toolbox' do
-  version '1.11.4269'
-  sha256 '7681d2729e924d7f1f15b6a9472a0637ee6e4a09855e76caec883a945a2bf28c'
+  version '1.16.6319'
+  sha256 'e4630d395e9ca6f8086e98011884923e8cfc702d3dc3cfb41048dbfc80daa0de'
 
   url "https://download.jetbrains.com/toolbox/jetbrains-toolbox-#{version}.dmg"
   appcast 'https://data.services.jetbrains.com/products/releases?code=TBA&latest=true&type=release'

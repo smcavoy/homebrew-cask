@@ -1,9 +1,9 @@
 cask 'lidarr' do
-  version '0.4.0.524'
-  sha256 '947133b1b3ed5cc6e246aac5ae69c7b3a6161aa44845a946e79d0780d7f832ca'
+  version '0.7.1.1381'
+  sha256 'b02ee13d37f2d24761297524f60a960c76e09acb7111e341bb3a0d6cb0eda05e'
 
   # github.com/lidarr/Lidarr was verified as official when first introduced to the cask
-  url "https://github.com/lidarr/Lidarr/releases/download/v#{version}/Lidarr.develop.#{version}.osx-app.zip"
+  url "https://github.com/lidarr/Lidarr/releases/download/v#{version}/Lidarr.master.#{version}.osx-app.zip"
   appcast 'https://github.com/lidarr/Lidarr/releases.atom'
   name 'Lidarr'
   homepage 'https://lidarr.audio/'

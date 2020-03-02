@@ -1,11 +1,13 @@
 cask 'yate' do
-  version '4.3.0.2'
-  sha256 '5a38b7d378a1466cd55969466736c447e23cfabf144e3f5d650745a010984b49'
+  version '5.1.1.2'
+  sha256 'a7fd5b96e15f4ac2d535205f4b70d941b9182047b4c2c8e0eca61dd506898e03'
 
   url 'https://2manyrobots.com/Updates/Yate/Yate.zip'
   appcast 'https://2manyrobots.com/Updates/Yate/appcast.xml'
   name 'Yate'
   homepage 'https://2manyrobots.com/yate/'
+
+  auto_updates true
 
   app 'Yate.app'
 end

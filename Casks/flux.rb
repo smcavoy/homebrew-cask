@@ -1,6 +1,6 @@
 cask 'flux' do
-  version '39.9871'
-  sha256 '122a451943ce68a11d3db3b11c74566cef99ed61ab6767679d96cdd8d57a82c2'
+  version '40.1'
+  sha256 '1844305519b450cfe3c5475e99f6c06fb2eea51e65c1b0ee25f6671a49fff75d'
 
   url "https://justgetflux.com/mac/Flux#{version}.zip"
   appcast 'https://justgetflux.com/mac/macflux.xml'
@@ -11,8 +11,7 @@ cask 'flux' do
 
   app 'Flux.app'
 
-  uninstall login_item: 'Flux',
-            quit:       'org.herf.Flux'
+  uninstall quit: 'org.herf.Flux'
 
   zap trash: [
                '~/Library/Application Support/Flux',

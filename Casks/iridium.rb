@@ -1,13 +1,12 @@
 cask 'iridium' do
-  version '2018.04.66.0,2018.4-0'
-  sha256 '337b75f59306995d76dc85b155cd693a5411da9e7172b2101d799fa54fff27b7'
+  version '2019.11.79.0'
+  sha256 'a53342aa2cad7df3e3792a66efa82e5d9ff61210e6c1ec8e880c65f899942099'
 
-  url "https://downloads.iridiumbrowser.de/macos/#{version.after_comma}/iridium_browser_#{version.before_comma}_macos_x64.dmg"
-  appcast 'https://downloads.iridiumbrowser.de/macos/'
+  url "https://downloads.iridiumbrowser.de/macos/#{version.major_minor}-0/iridium-browser_#{version.major_minor}-0_macos.dmg"
+  appcast 'https://downloads.iridiumbrowser.de/macos/',
+          configuration: version.major_minor
   name 'Iridium Browser'
   homepage 'https://iridiumbrowser.de/'
-
-  depends_on macos: '>= :mavericks'
 
   app 'Iridium.app'
 

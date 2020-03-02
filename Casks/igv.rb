@@ -1,14 +1,16 @@
 cask 'igv' do
-  version '2.4.14'
-  sha256 'de76a2c5716ab2d39ba03b966779c2c8c2c2ea4e177c82e25d337ea2b9ae6088'
+  version '2.8.0'
+  sha256 'e8bbf376ac190f548bc0a370355a088a79754bb110298f0f153104efd614bf5d'
 
   url "https://data.broadinstitute.org/igv/projects/downloads/#{version.major_minor}/IGV_#{version}.app.zip"
+  appcast 'https://data.broadinstitute.org/igv/projects/downloads/',
+          configuration: version.major_minor
   name 'Integrative Genomics Viewer (IGV)'
   homepage 'https://software.broadinstitute.org/software/igv/'
 
   app "IGV_#{version}.app"
 
   caveats do
-    depends_on_java '8'
+    depends_on_java '8+'
   end
 end

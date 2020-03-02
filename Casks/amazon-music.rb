@@ -1,9 +1,11 @@
 cask 'amazon-music' do
-  version '20181015,191833e156'
-  sha256 '37bb5852afad110f37cbd6799ebf963784929257cdd8cca56c4d5bd8cc682376'
+  version '7.10.0.2177,2002102177'
+  sha256 'ff8bb6f8175a0443d9640ed2608180271316df05369a32bb7d26ddbb78f796fd'
 
-  # ssl-images-amazon.com/images was verified as official when first introduced to the cask
-  url "https://images-na.ssl-images-amazon.com/images/G/01/digital/music/morpho/installers/#{version.before_comma}/#{version.after_comma}/AmazonMusicInstaller.dmg"
+  # morpho-releases.s3-us-west-2.amazonaws.com/mac was verified as official when first introduced to the cask
+  url "https://morpho-releases.s3-us-west-2.amazonaws.com/mac/#{version.after_comma}/AmazonMusicInstaller.dmg"
+  appcast 'https://www.amazon.com/gp/dmusic/desktop/downloadPlayer',
+          configuration: version.after_comma
   name 'Amazon Music'
   homepage 'https://www.amazon.com/musicapps'
 

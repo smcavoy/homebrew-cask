@@ -1,9 +1,10 @@
 cask 'sqlpro-for-postgres' do
-  version '1.0.302'
-  sha256 'da9c723cb9212b6077b8965b9d66a90b877dc32117649695a427cf6edc17fac1'
+  version '2020.14'
+  sha256 '6f10aebbef223021e59d2feb65b60000e644d8c9838948855fa4791649799ad8'
 
   # d3fwkemdw8spx3.cloudfront.net/postgres was verified as official when first introduced to the cask
   url "https://d3fwkemdw8spx3.cloudfront.net/postgres/SQLProPostgres.#{version}.app.zip"
+  appcast 'https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.macpostgresclient.com/download.php'
   name 'SQLPro for Postgres'
   homepage 'https://www.macpostgresclient.com/SQLProPostgres'
 

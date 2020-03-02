@@ -1,11 +1,13 @@
 cask 'mudlet' do
-  version '3.14.1'
-  sha256 'dedd4d63067e5f343a5ef3072d773e28ad8cd32913b6d18d9bf6b199270c275f'
+  version '4.5.2'
+  sha256 '520fef5e417631116e52b7fd46e805c369d0adfaed583dae8b05073637abd005'
 
-  url "https://www.mudlet.org/download/Mudlet-#{version}.dmg"
+  url "https://www.mudlet.org/wp-content/files/Mudlet-#{version}.dmg"
   appcast 'https://github.com/Mudlet/Mudlet/releases.atom'
   name 'Mudlet'
   homepage 'https://www.mudlet.org/'
+
+  depends_on macos: '>= :high_sierra'
 
   app 'Mudlet.app'
 end

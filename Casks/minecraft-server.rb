@@ -1,6 +1,6 @@
 cask 'minecraft-server' do
-  version '1.13.1,fe123682e9cb30031eae351764f653500b7396c9'
-  sha256 '2ea6047e7651c429228340acd7d1e35f4f6c7af42f59f92b0b1cd476561253d1'
+  version '1.15.2,bb2b6b1aefcd70dfd1892149ac3a215f6c636b07'
+  sha256 '80cf86dc2004ec6a2dc0183d1c75a9af3ba0669f7c332e4247afb1d76fb67e8a'
 
   # launcher.mojang.com was verified as official when first introduced to the cask
   url "https://launcher.mojang.com/v#{version.major}/objects/#{version.after_comma}/server.jar"
@@ -22,7 +22,7 @@ cask 'minecraft-server' do
     IO.write shimscript, <<~EOS
       #!/bin/sh
       cd '#{config_dir}' && \
-        exec /usr/bin/java -Xmx1024M -Xms1024M -jar '#{staged_path}/server.jar' nogui
+        exec /usr/bin/java ${@:--Xms1024M -Xmx1024M} -jar '#{staged_path}/server.jar' nogui
     EOS
   end
 

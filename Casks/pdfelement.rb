@@ -1,11 +1,13 @@
 cask 'pdfelement' do
-  version '6.7.6,2991'
-  sha256 'ac293559a0d770ee1278cc87850ef795d45145dae404c17e95fb7dff96666d89'
+  version '7.5.9,5237'
+  sha256 'b482f172508ce80be9b467e968997f47a766ad2ac61c8e67d11c5ec160eb61af'
 
-  url "http://download.wondershare.com/cbs_down/mac-pdfelement#{version.major}_full#{version.after_comma}.dmg"
+  url "http://download.wondershare.com/cbs_down/mac-pdfelement_full#{version.after_comma}.dmg"
+  appcast 'https://cbs.wondershare.com/go.php?m=upgrade_info&pid=5237'
   name 'Wondershare PDFelement for Mac'
   homepage 'https://pdf.wondershare.com/'
 
-  # Renamed for consistency: app name is different in the Finder and in a shell.
-  app "PDFelementStd#{version.major}.app", target: "PDFelement #{version.major}.app"
+  depends_on macos: '>= :sierra'
+
+  app 'PDFelement.app'
 end

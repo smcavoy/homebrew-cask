@@ -1,9 +1,10 @@
 cask 'visual-paradigm-ce' do
-  version '15.1,20181005'
-  sha256 '5f53b911fac9d30e4d44b08c539d6ad6b8d7f657adcb5a32b23b1618327ad4e6'
+  version '16.1,20200231'
+  sha256 '630cb22fc754a79b2ded4770572d8a62bd103a6a327efb5bb025f41f28d0c3f4'
 
-  url "https://usa6.visual-paradigm.com/visual-paradigm/vpce#{version.before_comma}/#{version.after_comma}/Visual_Paradigm_CE_#{version.before_comma.dots_to_underscores}_#{version.after_comma}_OSX_WithJRE.dmg"
-  appcast 'https://www.visual-paradigm.com/downloads/vpce/checksum.html'
+  url "https://www.visual-paradigm.com/downloads/vpce/Visual_Paradigm_CE_#{version.before_comma.dots_to_underscores}_#{version.after_comma}_OSX_WithJRE.dmg"
+  appcast 'https://www.visual-paradigm.com/downloads/vpce/checksum.html',
+          configuration: "#{version.before_comma.dots_to_underscores}_#{version.after_comma}"
   name 'Visual Paradigm Community Edition'
   homepage 'https://www.visual-paradigm.com/'
 

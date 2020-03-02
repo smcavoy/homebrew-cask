@@ -1,9 +1,9 @@
 cask 'alfred' do
-  version '3.7_938'
-  sha256 'aff50ff5e57070530ab2ed7068f6816ce7feaf624d46b9dab5bdaf2017ab199d'
+  version '4.0.8_1135'
+  sha256 'f26c60496d5272ad52be6fe2d9dbee80bd2a282bb3144a0713ffd40b7447d438'
 
   url "https://cachefly.alfredapp.com/Alfred_#{version}.dmg"
-  appcast 'https://www.alfredapp.com/app/update/general.xml'
+  appcast "https://www.alfredapp.com/app/update#{version.major}/general.xml"
   name 'Alfred'
   homepage 'https://www.alfredapp.com/'
 
@@ -11,14 +11,13 @@ cask 'alfred' do
 
   app "Alfred #{version.major}.app"
 
-  uninstall quit:       'com.runningwithcrayons.Alfred-3',
-            login_item: 'Alfred 3'
+  uninstall quit: 'com.runningwithcrayons.Alfred'
 
   zap trash: [
-               '~/Library/Application Support/Alfred 3',
-               '~/Library/Caches/com.runningwithcrayons.Alfred-3',
-               '~/Library/Preferences/com.runningwithcrayons.Alfred-3.plist',
-               '~/Library/Preferences/com.runningwithcrayons.Alfred-Preferences-3.plist',
-               '~/Library/Saved Application State/com.runningwithcrayons.Alfred-Preferences-3.savedState',
+               '~/Library/Application Support/Alfred',
+               '~/Library/Caches/com.runningwithcrayons.Alfred',
+               '~/Library/Preferences/com.runningwithcrayons.Alfred.plist',
+               '~/Library/Preferences/com.runningwithcrayons.Alfred-Preferences.plist',
+               '~/Library/Saved Application State/com.runningwithcrayons.Alfred-Preferences.savedState',
              ]
 end

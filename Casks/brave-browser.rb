@@ -1,21 +1,20 @@
 cask 'brave-browser' do
-  version '0.55.22'
-  sha256 '0993310db53755655e6e79487545652a954a8adace926efe95641edf36f053f3'
+  version '80.1.4.95,104.95'
+  sha256 '954bb1f60d46a1f821f221d51bc7429ab07b8c4a0d3acf3c5e3391985a87116d'
 
-  # github.com/brave/brave-browser was verified as official when first introduced to the cask
-  url "https://github.com/brave/brave-browser/releases/download/v#{version}/Brave-Browser.dmg"
+  # updates-cdn.bravesoftware.com/sparkle/Brave-Browser was verified as official when first introduced to the cask
+  url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Browser/stable/#{version.after_comma}/Brave-Browser.dmg"
   appcast 'https://updates.bravesoftware.com/sparkle/Brave-Browser/stable/appcast.xml'
   name 'Brave'
   homepage 'https://brave.com/'
 
   auto_updates true
-  depends_on macos: '>= :mavericks'
 
   app 'Brave Browser.app'
 
   zap trash: [
-               '~/Library/Application Support/brave',
-               '~/Library/Preferences/com.electron.brave.plist',
-               '~/Library/Saved Application State/com.electron.brave.savedState',
+               '~/Library/Application Support/BraveSoftware/Brave-Browser',
+               '~/Library/Preferences/com.brave.Browser.plist',
+               '~/Library/Saved Application State/com.brave.Browser.savedState',
              ]
 end

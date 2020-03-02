@@ -1,9 +1,9 @@
 cask 'splice' do
-  version '3.3.8'
-  sha256 'a679d155caf1b3630f882b9c739f91e4ec37be860ab358ab2b327333650ee663'
+  version '3.6.2'
+  sha256 '8e7992b1b49057c3f8d31d84383583073dd865cf03fdcdf9dcb6dd4ed51b7f45'
 
-  # splicedesktop.s3-us-west-1.amazonaws.com was verified as official when first introduced to the cask
-  url 'https://splicedesktop.s3-us-west-1.amazonaws.com/darwin/stable/Splice.app.zip'
+  # splicedesktop.s3.amazonaws.com was verified as official when first introduced to the cask
+  url 'https://splicedesktop.s3.amazonaws.com/darwin/stable/Splice.app.zip'
   appcast 'https://api.splice.com/v2/desktop/darwin/stable/latest?v=0.0.0'
   name 'Splice'
   homepage 'https://splice.com/'

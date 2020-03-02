@@ -1,6 +1,6 @@
 cask 'nrlquaker-winbox' do
-  version '3.18'
-  sha256 '26074a05475e8df1ad969033449b0613e8f497551736a51ae40b2f8ce7d2312f'
+  version '3.21.1'
+  sha256 'd6d2f6bbd42bd2b0e481b3874db94f45db5a99753bfa50465cc82b55f5036863'
 
   url "https://github.com/nrlquaker/winbox-mac/releases/download/v#{version}/Winbox-mac-#{version}.zip"
   appcast 'https://github.com/nrlquaker/winbox-mac/releases.atom'
@@ -9,5 +9,5 @@ cask 'nrlquaker-winbox' do
 
   app 'Winbox-mac.app'
 
-  zap trash: '~/Library/Application Support/com.mikrotik.winbox_*'
+  zap trash: '~/Library/Application Support/com.mikrotik.winbox'
 end

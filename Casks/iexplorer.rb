@@ -1,12 +1,11 @@
 cask 'iexplorer' do
-  version '4.2.6'
-  sha256 '9bf4b1dfaede90a63495ca539b75441d7ad7515d52760cee24c8cf8779c65b6b'
+  version '4.3.7,169'
+  sha256 '82eeb70aac3dcd9f2d647cf83c91937a1dd52c2b304d6afd4fc83a577e48f4b0'
 
-  url "https://assets.macroplant.com/downloads/iExplorer-#{version}.dmg"
+  url "https://assets.macroplant.com/download/#{version.after_comma}/iExplorer-#{version.before_comma}.dmg"
+  appcast "https://macroplant.com/iexplorer/mac/v#{version.major}/appcast"
   name 'iExplorer'
   homepage 'https://macroplant.com/iexplorer'
-
-  depends_on macos: '>= :mavericks'
 
   app 'iExplorer.app'
 end

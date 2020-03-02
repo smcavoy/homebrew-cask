@@ -1,29 +1,17 @@
 cask 'bettertouchtool' do
-  if MacOS.version <= :snow_leopard
-    version '0.939'
-    sha256 'fad5e9d36259c379bdb33188cf15d179fd9ff73023035c98f5734e7e3e13bb75'
-
-    # bettertouchtool.net/releases was verified as official when first introduced to the cask
-    url "https://bettertouchtool.net/releases/btt#{version}.zip"
-  elsif MacOS.version <= :lion
-    version '1.922'
-
-    # bettertouchtool.net/releases was verified as official when first introduced to the cask
-    sha256 '7a5a7cc9a9e5ae77f4ee7470f26453d327ccb55c7fac7f78f1bbe14ae9f0e70c'
-    url "https://bettertouchtool.net/releases/btt#{version}_lion.zip"
-  elsif MacOS.version <= :mavericks
+  if MacOS.version <= :mavericks
     version '2.05'
     sha256 '41013cfeffee286a038363651db3dd315ff3a1e0cf07774d9ce852111be50a5a'
 
     # bettertouchtool.net/releases was verified as official when first introduced to the cask
     url "https://bettertouchtool.net/releases/btt#{version}_final_10_9.zip"
   else
-    version '2.646'
-    sha256 '962fe8a61cb8de091f9dfe85d50d1be4957d331049c7a8bcd1ad5cbd4bed84e4'
+    version '3.346-1554'
+    sha256 '244e79c0aa4a0e25bd02f13058be8788c0b117f0c5b0770a17746fa8d580790b'
 
     # bettertouchtool.net/releases was verified as official when first introduced to the cask
     url "https://bettertouchtool.net/releases/btt#{version}.zip"
-    appcast 'https://bettertouchtool.net/releases/'
+    appcast 'https://www.corecode.io/macupdater/appcasts/bettertouchtool.txt'
   end
 
   name 'BetterTouchTool'
@@ -32,8 +20,6 @@ cask 'bettertouchtool' do
   auto_updates true
 
   app 'BetterTouchTool.app'
-
-  uninstall login_item: 'BetterTouchTool'
 
   zap trash: [
                '~/Library/Preferences/com.hegenberg.BetterTouchTool.plist',

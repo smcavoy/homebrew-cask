@@ -1,22 +1,22 @@
 cask 'dendroscope' do
-  version '3.5.9'
-  sha256 '63d3f42a7143710d40c2b5d4cf9a80e98820f92bf43eb16f4617dcf2d0f5b6c6'
+  version '3.7.2'
+  sha256 '3110de5fe27dab6af5139302ba990b68b285c67d555c3b9ea5031b44f6f4cfd6'
 
-  # ab.inf.uni-tuebingen.de/data/software/dendroscope3 was verified as official when first introduced to the cask
-  url "http://ab.inf.uni-tuebingen.de/data/software/dendroscope3/download/Dendroscope_macos_#{version.dots_to_underscores}.dmg"
-  appcast 'http://dendroscope.org/'
+  url "https://software-ab.informatik.uni-tuebingen.de/download/dendroscope/Dendroscope_macos_#{version.dots_to_underscores}.dmg"
+  appcast 'https://software-ab.informatik.uni-tuebingen.de/download/dendroscope3/welcome.html',
+          configuration: version.dots_to_underscores
   name 'Dendroscope'
-  homepage 'http://dendroscope.org/'
+  homepage 'https://www.wsi.uni-tuebingen.de/lehrstuehle/algorithms-in-bioinformatics/software/dendroscope/'
 
-  app 'Dendroscope.app'
+  installer script: {
+                      executable: 'Dendroscope Installer.app/Contents/MacOS/JavaApplicationStub',
+                      args:       ['-q'],
+                    }
 
-  preflight do
-    system_command "#{staged_path}/Dendroscope Installer.app/Contents/MacOS/JavaApplicationStub", args: ['-q', '-dir', staged_path.to_s]
-  end
-
-  uninstall_preflight do
-    system_command "#{staged_path}/Dendroscope Uninstaller.app/Contents/MacOS/JavaApplicationStub", args: ['-q']
-  end
+  uninstall script: {
+                      executable: "#{appdir}/Dendroscope/Dendroscope Uninstaller.app/Contents/MacOS/JavaApplicationStub",
+                      args:       ['-q'],
+                    }
 
   caveats do
     depends_on_java

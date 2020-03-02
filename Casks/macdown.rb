@@ -1,6 +1,6 @@
 cask 'macdown' do
-  version '0.7.1'
-  sha256 '4b26fb70b399cd998f226a78f81cd74348da19a8953aca80169fd7d00667496c'
+  version '0.8.0d71'
+  sha256 '6376343fe54a8f4c1dfe3b7c2a2bef0988d636692e2ffc2d20bd4f21543cc78f'
 
   # github.com/MacDownApp/macdown was verified as official when first introduced to the cask
   url "https://github.com/MacDownApp/macdown/releases/download/v#{version}/MacDown.app.zip"
@@ -9,7 +9,6 @@ cask 'macdown' do
   homepage 'https://macdown.uranusjr.com/'
 
   auto_updates true
-  depends_on macos: '>= :mountain_lion'
 
   app 'MacDown.app'
   binary "#{appdir}/MacDown.app/Contents/SharedSupport/bin/macdown"

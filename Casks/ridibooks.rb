@@ -1,10 +1,14 @@
 cask 'ridibooks' do
-  version '2.5.2'
-  sha256 'c02c59e6c655c101401c5981d8a02d028853b4d0ee2785d2c3986b27b595c199'
+  version '0.7.8'
+  sha256 '335b3e283dc901b9c48893277092bd94c93de75004cb5dae243ce3513610f719'
 
-  url "https://viewer-ota.ridibooks.com/mac/ridibooks-#{version}.dmg"
+  # viewer-ota.ridicdn.net/pc_electron was verified as official when first introduced to the cask
+  url "https://viewer-ota.ridicdn.net/pc_electron/Ridibooks-#{version}.dmg"
+  appcast 'https://s3-ap-northeast-2.amazonaws.com/viewer-ota.ridicdn.net/pc_electron/latest-mac.yml'
   name 'Ridibooks'
   homepage 'https://ridibooks.com/support/app/download'
+
+  depends_on macos: '>= :sierra'
 
   app 'Ridibooks.app'
 

@@ -6,7 +6,9 @@ cask 'paragon-ntfs' do
   name 'Paragon NTFS for Mac'
   homepage 'https://www.paragon-software.com/ufsdhome/ntfs-mac/'
 
-  installer manual: "Install Paragon NTFS for Mac #{version}.app"
+  auto_updates true
+
+  installer manual: 'FSInstaller.app'
 
   uninstall kext:      'com.paragon-software.filesystems.ntfs',
             launchctl: 'com.paragon-software.ntfs*',

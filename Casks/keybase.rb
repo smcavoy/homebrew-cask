@@ -1,6 +1,6 @@
 cask 'keybase' do
-  version '2.9.0-20181029210507,02197a56e8'
-  sha256 '4c334aa0e777113ee0f989f15916df61e0fb6a8b85ca31e54db4f10ad2f6c50f'
+  version '5.2.1-20200225174716,9845113a89'
+  sha256 'a90d79d88c4afcc80e85c18179bbb2efdc2dc4618fe24fc133c81f85c520bf3e'
 
   url "https://prerelease.keybase.io/darwin-updates/Keybase-#{version.before_comma}%2B#{version.after_comma}.zip"
   appcast 'https://prerelease.keybase.io/update-darwin-prod-v2.json'
@@ -16,19 +16,18 @@ cask 'keybase' do
                    args: ['install-auto']
   end
 
-  uninstall delete:     '/Library/PrivilegedHelperTools/keybase.Helper',
-            launchctl:  'keybase.Helper',
-            login_item: 'Keybase',
-            signal:     [
-                          ['TERM', 'keybase.Electron'],
-                          ['TERM', 'keybase.ElectronHelper'],
-                          ['KILL', 'keybase.Electron'],
-                          ['KILL', 'keybase.ElectronHelper'],
-                        ],
-            script:     {
-                          executable: "#{appdir}/Keybase.app/Contents/SharedSupport/bin/keybase",
-                          args:       ['uninstall'],
-                        }
+  uninstall delete:    '/Library/PrivilegedHelperTools/keybase.Helper',
+            launchctl: 'keybase.Helper',
+            signal:    [
+                         ['TERM', 'keybase.Electron'],
+                         ['TERM', 'keybase.ElectronHelper'],
+                         ['KILL', 'keybase.Electron'],
+                         ['KILL', 'keybase.ElectronHelper'],
+                       ],
+            script:    {
+                         executable: "#{appdir}/Keybase.app/Contents/SharedSupport/bin/keybase",
+                         args:       ['uninstall'],
+                       }
 
   zap trash: [
                '~/Library/Application Support/Keybase',

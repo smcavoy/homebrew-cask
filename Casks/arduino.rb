@@ -1,9 +1,9 @@
 cask 'arduino' do
-  version '1.8.7'
-  sha256 'bc5fae3e0b54f000d335d93f2e6da66fc8549def015e3b136d34a10e171c1501'
+  version '1.8.12'
+  sha256 '00832eb03db6e90c16637a8c3f2210adbce017d80f71a44f01035d147c693e7a'
 
   url "https://downloads.arduino.cc/arduino-#{version}-macosx.zip"
-  appcast 'https://www.arduino.cc/en/Main/ReleaseNotes'
+  appcast 'https://github.com/arduino/Arduino/releases.atom'
   name 'Arduino'
   homepage 'https://www.arduino.cc/'
 
@@ -14,8 +14,4 @@ cask 'arduino' do
                '~/Library/Arduino15',
                '~/Library/Preferences/cc.arduino.Arduino.plist',
              ]
-
-  caveats do
-    depends_on_java
-  end
 end

@@ -1,9 +1,9 @@
 cask 'geotag' do
-  version '4.4.1'
-  sha256 'e87ac3a09ed5294117d22627067722bb6c774d32bba950cc279b4818c9226818'
+  version '4.7'
+  sha256 '60321d98a35570307a1565292d7a09ef6c5f5deda78ee7ff06d7ae21df9e73c6'
 
   url "https://www.snafu.org/GeoTag/GeoTag-#{version}.dmg"
-  appcast 'https://www.snafu.org/GeoTag/'
+  appcast 'https://github.com/marchyman/GeoTag/releases.atom'
   name 'GeoTag'
   homepage 'https://www.snafu.org/GeoTag/'
 

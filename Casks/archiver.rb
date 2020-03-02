@@ -1,6 +1,6 @@
 cask 'archiver' do
-  version '3.0.4'
-  sha256 'f1e9ab990b8efe070cda5a823fe82f1f4e62f404d78c3265f80b851bd33008e0'
+  version '3.0.9'
+  sha256 '6e5a623b5ab84efafa9d7dee5f76527a458518552d7caa1dcaae48f23048783e'
 
   # storage.googleapis.com/incrediblebee was verified as official when first introduced to the cask
   url "https://storage.googleapis.com/incrediblebee/apps/Archiver-#{version.major}/Archiver-#{version}.zip"
@@ -11,4 +11,9 @@ cask 'archiver' do
   depends_on macos: '>= :sierra'
 
   app 'Archiver.app'
+
+  zap trash: [
+               '~/Library/Application Support/com.incrediblebee.Archiver*',
+               '~/Library/Preferences/com.incrediblebee.Archiver*.plist',
+             ]
 end

@@ -1,12 +1,14 @@
 cask 'macsvg' do
-  version '1.1.4'
-  sha256 '48c4efc381b2c1b90639757b8b5c6bb6a9dbf43cbf40e51d5b083973b5174992'
+  version '1.1.6'
+  sha256 '879228e0afb51bd451e52801b1b434f92869f133bef9f34a42bd144c2213d5a4'
 
   # github.com/dsward2/macSVG was verified as official when first introduced to the cask
   url "https://github.com/dsward2/macSVG/releases/download/v#{version}/macSVG-v#{version}.zip"
   appcast 'https://github.com/dsward2/macSVG/releases.atom'
   name 'macSVG'
   homepage 'https://macsvg.org/'
+
+  depends_on macos: '>= :mojave'
 
   app "macSVG-v#{version}/macSVG.app"
 

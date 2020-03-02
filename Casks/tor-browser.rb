@@ -1,133 +1,168 @@
 cask 'tor-browser' do
-  version '8.0.3'
+  version '9.0.5'
 
   language 'ar' do
-    sha256 '4d4655ae29484de4dc4b5e905616d1e138d582c0484bc3d639828e84027061d4'
+    sha256 'f2688ac10736d4e8eb88b362b9bbac5e9569e7379f0414141e58d6e1863612cf'
     'ar'
   end
 
   language 'ca' do
-    sha256 '705ed3d89671393b2159bb07df6128580d03427ca30afb238cdeb2298411b899'
+    sha256 '4c4f792645c91a41c66aa0e433545cb6b1f9e8297129d7e72e7b318bcb23d0bd'
     'ca'
   end
 
+  language 'cs' do
+    sha256 'efc771bd4e116b1464973eaa6e704dd5ec3b3ae1ef6a2d15a9c66cc4721eb3c9'
+    'cs'
+  end
+
   language 'da' do
-    sha256 '7179aa2be5cf4d63620a36f97fd25be79e23a7bef007bc80c0bbaf05897bb9a1'
+    sha256 'cbcccf93e35a152cb3c419552d54fc2aae03714ddff8c89b703a86606aedeb1d'
     'da'
   end
 
   language 'de' do
-    sha256 '8bc8616ab6cc94514f1077d494687f2c88a1cdbb54f28dce24c1c9b27f0426fe'
+    sha256 '3ff8dab7aa61a3eba9dbee1851de0322053200187617cbaefd3e672cd439d5b9'
     'de'
   end
 
+  language 'el' do
+    sha256 '00d9d894ef0e28bdd834b891747aa642284cb66829cdcb29ea051f0bb8b20277'
+    'el'
+  end
+
   language 'en', default: true do
-    sha256 '706c51407f23e18eb21899dadcb9b861b1a3d394a02838c63bd8eb6c61c6ab01'
+    sha256 '51e40ede5827259b0183dcea7043485015fb9633bcb551adcf61a623d5d4bb63'
     'en-US'
   end
 
-  language 'es' do
-    sha256 '9d40fd2deb4ded2a2c61447cf02c6e11188c1c958ea6e49fe632757a9f715dce'
+  language 'es-ar' do
+    sha256 'cadcb0c9605596b3dff52506c1751f68bbf44b76aa3a44dabac0e87eed3e74e6'
+    'es-AR'
+  end
+
+  language 'es-es' do
+    sha256 '02b82e7dab6e7398b51777cbd3e2f8fb84bf3e4adffcbf2ebcb74412a58fcd82'
     'es-ES'
   end
 
   language 'fa' do
-    sha256 '8833906c14b40849be0e54cb1d58307ebb071fd622a9fef0aca109501420441c'
+    sha256 '04103eb263ab441df59e21e0a3fe4813ab2f336bdc1bd84f906d2b82fffa5529'
     'fa'
   end
 
   language 'fr' do
-    sha256 '48f69feec85041df2b420b1cc1f55a81816656ad60e593d81a5b6b38766a1ae9'
+    sha256 '7fc4de7a4acc282df3156f29907c39b0f98e3c079ca087cf3e163e2e3392111f'
     'fr'
   end
 
   language 'ga' do
-    sha256 '916521b2a677ea6a613fb1309c7edea6c35eb8404537b35a5d1e7dcb4da4d1d9'
+    sha256 '9cb8c6bafc3234c6f7a493a50966adde9365de1743ec9535e198cdc715c043d7'
     'ga-IE'
   end
 
   language 'he' do
-    sha256 '0536d7c969c1ec8675d8a854a31297280d115e3c00fc5861135d35a7bc31f3a4'
+    sha256 '7647e9946b4107f75d42b7fa9d270837e0b23f77962dc751f865cacd8baa2847'
     'he'
   end
 
+  language 'hu' do
+    sha256 'b39dfcfd0159d2a75e95b88ef6c560f7ab3e43e38b8166ccc3d547eaf8b86a0d'
+    'hu'
+  end
+
   language 'id' do
-    sha256 '82c6a50275ecec14b0e54aee74801aecb1c2a7a0e14ed0612ef70537bc40b90d'
+    sha256 '943ac100a3642f74af5fa366ed4960397b8d37613e4cf4cb0993699189cfcd27'
     'id'
   end
 
   language 'is' do
-    sha256 '88e498457fdc5274337b12767cb803a8ef1a5782ba45a2b601691febbaedf582'
+    sha256 '873c4ea1e543804146fb62b3752e9ce7fb940b67aa3dad9a78158acab360907f'
     'is'
   end
 
   language 'it' do
-    sha256 'f83659604e06ff8684b06d182549bb1951a6329abdf7d697ec427c168136fa52'
+    sha256 'a895ddd5b3e099a869956d9a1e4ae5413c14c55c518f6ed94ac840551f24b12c'
     'it'
   end
 
   language 'ja' do
-    sha256 '268b981704ab8ce228260c772984ddc18e12985f4657767e6abf34b00073fe88'
+    sha256 'fe115f7625a3569d7cb5db536d2d9c95d7f5a118f35118acfb15aaee980be3b9'
     'ja'
   end
 
+  language 'ka' do
+    sha256 '1154d9ce09e590552f6a55ab27a47891a2d857db05c9a12245459d2d6990435a'
+    'ka'
+  end
+
   language 'ko' do
-    sha256 '0b255a24fbe1b0081b6a57a51f8ed8879e49793841906d0d92cba436cb4a7dbe'
+    sha256 'df9a1bac32378691dbd8e4e861d830a7a1de2643f52c509e08502148ddb13af3'
     'ko'
   end
 
+  language 'mk' do
+    sha256 '6b8389dd0e2f8d673298a3659d4a87d8d61573c4ac1b4be82d36938edaa01d9b'
+    'mk'
+  end
+
   language 'nb' do
-    sha256 'a5961de31cfb2d0450c2e83b9f0d452ec056db716c190a480d784270c2e2bb5c'
+    sha256 'a5c52792076547e5ed39410a8b9cddbd5fbbf053f54ceebbc60dfccb628b796d'
     'nb-NO'
   end
 
   language 'nl' do
-    sha256 'ae22853eb6e832f33cf487c00d44e5bf81f2f76a1a36328b4f209f48b1492c1d'
+    sha256 '608face60ea6a286dcce8be4f12145d0330d0ca8ef2f16e780724070ccd0a570'
     'nl'
   end
 
   language 'pl' do
-    sha256 '5e364df1ef7c30787c3f911a24fcd5fab1d55f3807eac8e861853e218f9e7638'
+    sha256 'aad20f1df1bfee71f79c789c335756ee22ff43bf50fa7e0d7ea45ba47c204b02'
     'pl'
   end
 
   language 'pt' do
-    sha256 '6603fc4cae13fcda93b21c6040cdceac6eb52f1da7259e56fab9bf16973db998'
+    sha256 '13ccfcc04937da6df7c59aa37f7677a2cfc37d14f06e72ec066fa03dbbada425'
     'pt-BR'
   end
 
+  language 'ro' do
+    sha256 'cda909258a03661eab485a6ec022682d774b297cb3e8a65022ec8cef962ea4a0'
+    'ro'
+  end
+
   language 'ru' do
-    sha256 '3218532197b20ca3ed3ceed39a99f06ea9139f3e2a4a2146b4f36d4e94d6951a'
+    sha256 '6bef6776d7f316c74d71dc6e19c5aa164073781831fae385545096dc92f0636d'
     'ru'
   end
 
   language 'sv' do
-    sha256 'ee5a4106fb8dd3ff286f9dcf5b0f83dd6f28d60991e25fcebc9707532dbdd4ff'
+    sha256 'fe6b47b481d38e07addd88bce45dd93a9072b6749a9d0d5067dff6a017ca362e'
     'sv-SE'
   end
 
   language 'tr' do
-    sha256 'beba4b5d4d1b7a1e47f0b1c3ba429b8b783241463fa7b3a6cbcdc1d55202df3e'
+    sha256 '5bd8ab2147aa6573036b4b8405fa038acc9087ee91e34f1720c19962414331b8'
     'tr'
   end
 
   language 'vi' do
-    sha256 '955a620073a2ef79a2d6167b1b9da5d79a0b2efbb6abf9ebe79a328129d453e3'
+    sha256 '543b74c33dfa2eec6d889159be35bceb4fbcb980fac35d464c5a488f386e24eb'
     'vi'
   end
 
   language 'zh-cn' do
-    sha256 '4e997ed550a700a62a84d9a85f6cf47ba759798ad57e0612910dfb2ccf854df0'
+    sha256 'd6bd56affe69d3bbef4ad07bbd0b5e8f06342e2a016d0c41394a2e25ab385d95'
     'zh-CN'
   end
 
   language 'zh-tw' do
-    sha256 'dbc39a27c82d0953fcda0385567fe612879334024fb8699aa6fb72c7b412dd16'
+    sha256 '721e4086fccd556bf8241be024650b33e6028de455dd0f36564ffc35ef07fefb'
     'zh-TW'
   end
 
   url "https://dist.torproject.org/torbrowser/#{version}/TorBrowser-#{version}-osx64_#{language}.dmg"
-  appcast 'https://dist.torproject.org/torbrowser/'
+  appcast 'https://www.torproject.org/download/'
   name 'Tor Browser'
   homepage 'https://www.torproject.org/projects/torbrowser.html'
 

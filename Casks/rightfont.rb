@@ -1,13 +1,14 @@
 cask 'rightfont' do
-  version '4.10'
-  sha256 '9ff22c538b96cc928dca659abc63158be5f8b156c6fdef776392c0cbd6e2ab84'
+  version '5.8.3'
+  sha256 '3a38234a379cb298770398fefc1a95ae0d9077d98616d0593c97bf6eac80871c'
 
-  url "https://rightfontapp.com/downloads/#{version}/rightfont.zip"
-  appcast 'https://rightfontapp.com/update/appcast.xml'
+  url 'https://rightfontapp.com/update/rightfont.zip'
+  appcast "https://rightfontapp.com/update/appcast#{version.major}.xml"
   name 'RightFont'
   homepage 'https://rightfontapp.com/'
 
+  auto_updates true
   depends_on macos: '>= :yosemite'
 
-  app 'RightFont.app'
+  app "RightFont #{version.major}.app"
 end

@@ -1,8 +1,9 @@
 cask 'focuswriter' do
-  version '1.6.14'
-  sha256 '6593d2b28ff6e221009f43026a7da208045d2bee1176369847f018e6755f4582'
+  version '1.7.5'
+  sha256 '80b1892c72073a6ab225408fc0942b172a702212ab5bcd9ee87140857e389386'
 
   url "https://gottcode.org/focuswriter/FocusWriter_#{version}.dmg"
+  appcast 'https://gottcode.org/focuswriter/'
   name 'FocusWriter'
   homepage 'https://gottcode.org/focuswriter/'
 

@@ -1,6 +1,6 @@
 cask 'ubersicht' do
-  version '1.2.53'
-  sha256 'e74dfc4d49e035269e44563541eb0b50b5de7c102fe948a09d5b075140ddf29e'
+  version '1.4.61'
+  sha256 '0e5090b99d48eb6c4b3dbcea67c32018079285015996ff2bb4cc68d383b7d019'
 
   url "http://tracesof.net/uebersicht/releases/Uebersicht-#{version}.app.zip"
   appcast 'http://tracesof.net/uebersicht/updates.xml.rss'
@@ -11,8 +11,6 @@ cask 'ubersicht' do
   depends_on macos: '>= :yosemite'
 
   app 'Übersicht.app'
-
-  uninstall login_item: 'Übersicht'
 
   zap trash: [
                '~/Library/Application Support/Übersicht',

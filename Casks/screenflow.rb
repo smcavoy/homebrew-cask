@@ -1,6 +1,6 @@
 cask 'screenflow' do
-  version '8.1'
-  sha256 '3b5ac3e0867f09f25f37d3dfcbf614c1e1577c2238acffc8834e4d153fa093d4'
+  version '9.0.2'
+  sha256 '39940d4a7d4ac9ca5f20046c8bd731ae9344f86321a70e2fb97b8d125a255fb6'
 
   url "https://www.telestream.net/download-files/screenflow/#{version.major_minor.dots_to_hyphens}/ScreenFlow-#{version}.dmg"
   appcast 'https://www.telestream.net/updater/screenflow/appcast.xml'
@@ -8,7 +8,7 @@ cask 'screenflow' do
   homepage 'https://www.telestream.net/screenflow/'
 
   auto_updates true
-  depends_on macos: '>= :sierra'
+  depends_on macos: '>= :high_sierra'
 
   app 'ScreenFlow.app'
 end

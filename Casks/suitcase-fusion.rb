@@ -1,11 +1,13 @@
 cask 'suitcase-fusion' do
-  version '8,19.1.1'
-  sha256 '7a1df59d333962cc3db4fd61331ab7d33733caeaeb21c96e2daa2361f6732db5'
+  version '21.0.0'
+  sha256 '38a3c56392b88856a95a9dfd6a04f33102eed7a5ba9e675d5d054ce33acbcb5c'
 
-  url "https://bin.extensis.com/SuitcaseFusion#{version.before_comma}-M-#{version.after_comma.dots_to_hyphens}.dmg"
-  appcast "https://sparkle.extensis.com/u/ST/EN/suitcase#{version.after_comma.major}en.xml"
+  url "https://bin.extensis.com/SuitcaseFusion-M-#{version.dots_to_hyphens}.dmg"
+  appcast "https://www.extensis.com/support/suitcase-fusion-#{version.major}/release-notes/"
   name 'Extensis Suitcase Fusion'
-  homepage 'https://www.extensis.com/'
+  homepage 'https://www.extensis.com/suitcase-fusion/'
+
+  depends_on macos: '>= :high_sierra'
 
   app 'Suitcase Fusion.app'
 end

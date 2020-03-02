@@ -1,11 +1,14 @@
 cask 'keep-it' do
-  version '1.5.3'
-  sha256 'ea4f0fef7279942cff345fbb138c4f108bc8d2c822985644d37b06323f1c0ac6'
+  version '1.8.2'
+  sha256 'd80e16c90a75510660c20e536a395e04bafab2d8592b7ba8ad5418f0028c17c0'
 
   url "https://reinventedsoftware.com/keepit/downloads/KeepIt_#{version}.dmg"
   appcast 'https://reinventedsoftware.com/keepit/downloads/keepit.xml'
   name 'Keep It'
   homepage 'https://reinventedsoftware.com/keepit/'
+
+  auto_updates true
+  depends_on macos: '>= :high_sierra'
 
   app 'Keep It.app'
 

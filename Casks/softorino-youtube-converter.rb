@@ -1,12 +1,11 @@
 cask 'softorino-youtube-converter' do
-  version '2.0.23,1538666747'
-  sha256 '069ae9b5170763821ca633bf69b597e70d36bbfe468c211799a74912a017acae'
+  version '2.1.14'
+  sha256 '6b88e76c6b686c7a00982aaede60a171894ca726ae9020d2be4b7a6ce3ae4dff'
 
-  # devmate.com/com.softorino.syc2 was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.softorino.syc2/#{version.before_comma}/#{version.after_comma}/SYC2-#{version.before_comma}.zip"
-  appcast "https://updates.devmate.com/com.softorino.syc#{version.major}.xml"
+  url "https://shining.softorino.com/shine_uploads/softorinoyoutubeconverter#{version.major}mac_#{version}.dmg"
+  appcast 'https://shining.softorino.com/appcast.php?abbr=syc2m'
   name 'Softorino YouTube Converter'
-  homepage "https://softorino.com/youtube-converter-#{version.major}/"
+  homepage 'https://softorino.com/youtube-converter/'
 
   app "Softorino YouTube Converter #{version.major}.app"
 end

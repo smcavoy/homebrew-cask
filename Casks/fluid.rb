@@ -7,10 +7,14 @@ cask 'fluid' do
   name 'Fluid'
   homepage 'https://fluidapp.com/'
 
+  depends_on macos: '>= :sierra'
+
   app 'Fluid.app'
 
   zap trash: [
                '~/Library/Application Support/Fluid',
-               '~/Library/Preferences/com.fluidapp.Fluid.plist',
+               '~/Library/Caches/com.fluidapp.Fluid2',
+               '~/Library/Preferences/com.fluidapp.Fluid*',
+               '~/Library/Saved Application State/com.fluidapp.Fluid*',
              ]
 end

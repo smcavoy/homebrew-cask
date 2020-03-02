@@ -5,15 +5,21 @@ cask 'sourcetree' do
 
     # atlassian.com/software/sourcetree was verified as official when first introduced to the cask
     url "https://downloads.atlassian.com/software/sourcetree/Sourcetree_#{version}.zip"
+  elsif MacOS.version <= :high_sierra
+    version '3.2.1_225'
+    sha256 '4bd82affa3402814c3d07ff613fbc8f45da8b0cda294d498ffbb0667bf729c9f'
+
+    # atlassian.com/software/sourcetree was verified as official when first introduced to the cask
+    url "https://product-downloads.atlassian.com/software/sourcetree/ga/Sourcetree_#{version}.zip"
   else
-    version '3.0_200'
-    sha256 'ec5962fb17edcd4d67c6c486b3cdb7dcfe7ddc38c089f726cb9a7b1d0eff2d78'
+    version '4.0.1_234'
+    sha256 'b6b059b6d1c91729bf6c44dac09d79c8ae6e22fefd1bee705c7814a2099c3131'
 
     # atlassian.com/software/sourcetree was verified as official when first introduced to the cask
     url "https://product-downloads.atlassian.com/software/sourcetree/ga/Sourcetree_#{version}.zip"
   end
 
-  appcast 'https://www.sourcetreeapp.com/update/SparkleAppcastGroup1.xml'
+  appcast 'https://product-downloads.atlassian.com/software/sourcetree/Appcast/SparkleAppcastGroup0.xml'
   name 'Atlassian SourceTree'
   homepage 'https://www.sourcetreeapp.com/'
 

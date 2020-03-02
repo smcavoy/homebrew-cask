@@ -1,6 +1,6 @@
 cask 'graphicconverter' do
-  version '10.6.6,3228'
-  sha256 '4d13670be3b619706a2592ca5c232365c6add04e700d8bb4212c3d6d857eb48a'
+  version '11.1.2,4216'
+  sha256 '3280965384b2616556840f9dae826c85b0df7157bc6a875cc0d0d2e13f7c2df0'
 
   # lemkesoft.info was verified as official when first introduced to the cask
   url "https://www.lemkesoft.info/files/graphicconverter/gc#{version.major}_build#{version.after_comma}.zip"
@@ -9,7 +9,13 @@ cask 'graphicconverter' do
   homepage 'https://www.lemkesoft.de/en/products/graphicconverter/'
 
   auto_updates true
-  depends_on macos: '>= :mavericks'
 
   app "GraphicConverter #{version.major}.app"
+
+  zap trash: [
+               '/Users/Shared/Library/Application Support/GraphicConverter',
+               '~/Library/Application Support/GraphicConverter',
+               '~/Library/Group Containers/*.com.lemkesoft.graphicconverter*.group',
+               '~/Library/Caches/com.lemkesoft.graphicconverter*',
+             ]
 end

@@ -1,10 +1,10 @@
 cask 'ithoughtsx' do
-  version '5.12'
-  sha256 '21f8833719b0ae982406f6d036679263e2b7c0d40825ec8563ede114e622e821'
+  version '5.18'
+  sha256 '523414e6478925c67a21b4451a8ad1658b7e26c07f5ed804061b1ca98618cf94'
 
-  # s3-eu-west-1.amazonaws.com/ithoughtsx was verified as official when first introduced to the cask
-  url "https://s3-eu-west-1.amazonaws.com/ithoughtsx/iThoughtsX_#{version.dots_to_underscores}.zip"
-  appcast 'https://s3-eu-west-1.amazonaws.com/ithoughtsx/ithoughtsx.xml'
+  # ithoughtsx.s3.amazonaws.com was verified as official when first introduced to the cask
+  url "https://ithoughtsx.s3.amazonaws.com/iThoughtsX_#{version.dots_to_underscores}.zip"
+  appcast 'https://ithoughtsx.s3.amazonaws.com/ithoughtsx.xml'
   name 'iThoughtsX'
   homepage 'https://www.toketaware.com/ithoughts-osx'
 
